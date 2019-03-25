@@ -1,0 +1,55 @@
+module layer4(g,a,c0,go,ao);
+input [31:0] g,a;
+input c0;
+output [31:0] go,ao;
+
+assign ao[0] = a[0];
+assign ao[1] = a[1];
+assign ao[2] = a[2];
+assign ao[3] = a[3];
+assign ao[4] = a[4];
+assign ao[5] = a[5];
+assign ao[6] = a[6];
+assign ao[7] = a[7];
+assign ao[8] = a[8];
+assign ao[9] = a[9];
+assign ao[10] = a[10];
+assign ao[11] = a[11];
+assign ao[12] = a[12];
+assign ao[13] = a[13];
+assign ao[14] = a[14];
+assign go[0] = g[0];
+assign go[1] = g[1];
+assign go[2] = g[2];
+assign go[3] = g[3];
+assign go[4] = g[4];
+assign go[5] = g[5];
+assign go[6] = g[6];
+adder1 u1({g[7],a[7]},c0,go[7]);
+adder1 u2({g[8],a[8]},g[0],go[8]);
+adder1 u3({g[9],a[9]},g[1],go[9]);
+adder1 u4({g[10],a[10]},g[2],go[10]);
+adder1 u5({g[11],a[11]},g[3],go[11]);
+adder1 u6({g[12],a[12]},g[4],go[12]);
+adder1 u7({g[13],a[13]},g[5],go[13]);
+adder1 u8({g[14],a[14]},g[6],go[14]);
+
+adder2	u9	({g[15	],a[15	]},{g[7	],a[7	]},{go[15	],ao[15	]});
+adder2	u10	({g[16	],a[16	]},{g[8	],a[8	]},{go[16	],ao[16	]});
+adder2	u11	({g[17	],a[17	]},{g[9	],a[9	]},{go[17	],ao[17	]});
+adder2	u12	({g[18	],a[18	]},{g[10	],a[10	]},{go[18	],ao[18	]});
+adder2	u13	({g[19	],a[19	]},{g[11	],a[11	]},{go[19	],ao[19	]});
+adder2	u14	({g[20	],a[20	]},{g[12	],a[12	]},{go[20	],ao[20	]});
+adder2	u15	({g[21	],a[21	]},{g[13	],a[13	]},{go[21	],ao[21	]});
+adder2	u16	({g[22	],a[22	]},{g[14	],a[14	]},{go[22	],ao[22	]});
+adder2	u17	({g[23	],a[23	]},{g[15	],a[15	]},{go[23	],ao[23	]});
+adder2	u18	({g[24	],a[24	]},{g[16	],a[16	]},{go[24	],ao[24	]});
+adder2	u19	({g[25	],a[25	]},{g[17	],a[17	]},{go[25	],ao[25	]});
+adder2	u20	({g[26	],a[26	]},{g[18	],a[18	]},{go[26	],ao[26	]});
+adder2	u21	({g[27	],a[27	]},{g[19	],a[19	]},{go[27	],ao[27	]});
+adder2	u22	({g[28	],a[28	]},{g[20	],a[20	]},{go[28	],ao[28	]});
+adder2	u23	({g[29	],a[29	]},{g[21	],a[21	]},{go[29	],ao[29	]});
+adder2	u24	({g[30	],a[30	]},{g[22	],a[22	]},{go[30	],ao[30	]});
+adder2	u25	({g[31	],a[31	]},{g[23	],a[23	]},{go[31	],ao[31	]});
+
+endmodule

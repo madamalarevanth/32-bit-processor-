@@ -1,0 +1,79 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_003EA2B8 .scope module, "PE4_tb" "PE4_tb" 2 1;
+ .timescale 0 0;
+v005DE6F8_0 .var "A", 3 0;
+RS_005AD864 .resolv tri, L_005DE7A8, L_005DE960, L_005DEAC0, L_005DEBC8;
+v005DE750_0 .net8 "Y", 3 0, RS_005AD864; 4 drivers
+S_003EA340 .scope module, "u1" "PE4" 2 5, 3 1, S_003EA2B8;
+ .timescale 0 0;
+L_003E50A8 .functor NOT 1, L_005DE800, C4<0>, C4<0>, C4<0>;
+L_003E31B0 .functor NOT 1, L_005DE858, C4<0>, C4<0>, C4<0>;
+L_003E3220 .functor AND 1, L_003E50A8, L_003E31B0, C4<1>, C4<1>;
+L_003E5070 .functor NOT 1, L_005DE8B0, C4<0>, C4<0>, C4<0>;
+L_005DF0F8 .functor AND 1, L_003E3220, L_003E5070, C4<1>, C4<1>;
+L_005DF1A0 .functor AND 1, L_005DF0F8, L_005DE908, C4<1>, C4<1>;
+L_005DF298 .functor NOT 1, L_005DE9B8, C4<0>, C4<0>, C4<0>;
+L_005DF308 .functor NOT 1, L_005DEA10, C4<0>, C4<0>, C4<0>;
+L_005DF378 .functor AND 1, L_005DF298, L_005DF308, C4<1>, C4<1>;
+L_005DF420 .functor AND 1, L_005DF378, L_005DEA68, C4<1>, C4<1>;
+L_005DF538 .functor NOT 1, L_005DEB18, C4<0>, C4<0>, C4<0>;
+L_005DF500 .functor AND 1, L_005DF538, L_005DEB70, C4<1>, C4<1>;
+v003ECFA8_0 .net "A", 3 0, v005DE6F8_0; 1 drivers
+v003EDA38_0 .alias "Y", 3 0, v005DE750_0;
+v003ED000_0 .net *"_s10", 0 0, L_003E3220; 1 drivers
+v003ED058_0 .net *"_s13", 0 0, L_005DE8B0; 1 drivers
+v003E4FB0_0 .net *"_s14", 0 0, L_003E5070; 1 drivers
+v005DE070_0 .net *"_s16", 0 0, L_005DF0F8; 1 drivers
+v005DE0C8_0 .net *"_s19", 0 0, L_005DE908; 1 drivers
+v005DE120_0 .net *"_s20", 0 0, L_005DF1A0; 1 drivers
+v005DE178_0 .net *"_s25", 0 0, L_005DE9B8; 1 drivers
+v005DE1D0_0 .net *"_s26", 0 0, L_005DF298; 1 drivers
+v005DE228_0 .net *"_s29", 0 0, L_005DEA10; 1 drivers
+v005DE280_0 .net *"_s3", 0 0, L_005DE800; 1 drivers
+v005DE2D8_0 .net *"_s30", 0 0, L_005DF308; 1 drivers
+v005DE330_0 .net *"_s32", 0 0, L_005DF378; 1 drivers
+v005DE388_0 .net *"_s35", 0 0, L_005DEA68; 1 drivers
+v005DE3E0_0 .net *"_s36", 0 0, L_005DF420; 1 drivers
+v005DE438_0 .net *"_s4", 0 0, L_003E50A8; 1 drivers
+v005DE490_0 .net *"_s41", 0 0, L_005DEB18; 1 drivers
+v005DE4E8_0 .net *"_s42", 0 0, L_005DF538; 1 drivers
+v005DE540_0 .net *"_s45", 0 0, L_005DEB70; 1 drivers
+v005DE598_0 .net *"_s46", 0 0, L_005DF500; 1 drivers
+v005DE5F0_0 .net *"_s51", 0 0, L_005DEC20; 1 drivers
+v005DE648_0 .net *"_s7", 0 0, L_005DE858; 1 drivers
+v005DE6A0_0 .net *"_s8", 0 0, L_003E31B0; 1 drivers
+L_005DE7A8 .part/pv L_005DF1A0, 0, 1, 4;
+L_005DE800 .part v005DE6F8_0, 3, 1;
+L_005DE858 .part v005DE6F8_0, 2, 1;
+L_005DE8B0 .part v005DE6F8_0, 1, 1;
+L_005DE908 .part v005DE6F8_0, 0, 1;
+L_005DE960 .part/pv L_005DF420, 1, 1, 4;
+L_005DE9B8 .part v005DE6F8_0, 3, 1;
+L_005DEA10 .part v005DE6F8_0, 2, 1;
+L_005DEA68 .part v005DE6F8_0, 1, 1;
+L_005DEAC0 .part/pv L_005DF500, 2, 1, 4;
+L_005DEB18 .part v005DE6F8_0, 3, 1;
+L_005DEB70 .part v005DE6F8_0, 2, 1;
+L_005DEBC8 .part/pv L_005DEC20, 3, 1, 4;
+L_005DEC20 .part v005DE6F8_0, 3, 1;
+    .scope S_003EA2B8;
+T_0 ;
+    %set/v v005DE6F8_0, 1, 4;
+    %end;
+    .thread T_0;
+    .scope S_003EA2B8;
+T_1 ;
+    %vpi_call 2 15 "$monitor", $time, "A=%b,\012Y=%b", v005DE6F8_0, v005DE750_0;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "PE4_tb.v";
+    "PE4.v";
