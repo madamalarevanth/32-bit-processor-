@@ -2,6 +2,7 @@
 as part of our curriculum i have developed a 32 bit pipelined-processor in verilog code for Computer Architecture course 
 
 basically the processor contains 8 functionalities 
+
 1.Addition and Subtraction :for which i have used prefix adder following ladner-fischer logic  and a pipelined approach 
 
 2.Multiplication:for multiplication i have used wallace tree multiplier (with carry save adders inside it)
